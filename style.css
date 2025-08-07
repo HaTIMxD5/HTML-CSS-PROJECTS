@@ -197,7 +197,7 @@ nav li a:focus {
   backdrop-filter: blur(7px);
   list-style: none;
   position: absolute;
-  bottom: -4.86vh;
+  bottom: 2vh;
   left: 37.76vw;
   cursor: pointer;
 }
@@ -217,7 +217,7 @@ nav li a:focus {
   width: 65%;
   background: #fd853a;
   font-weight: 600;
-  transform: translateX(5px);
+  transform: translateX(0.32vw);
   margin-left: -0.32vw;
 }
 #hire-me {
@@ -227,7 +227,7 @@ nav li a:focus {
 }
 #pore li img {
   position: relative;
-  top: -6.59vh;
+  top: -2.5vh;
 }
 #hire-me img {
   opacity: 0;
@@ -239,7 +239,7 @@ nav li a:focus {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
-  /* position: relative; */
+  position: relative;
 }
 #article-two header {
   width: 90%;
@@ -279,7 +279,7 @@ nav li a:focus {
   top: -70px;
   right: -76px;
 }
-#article-two section {
+#article-two section:not(#dots) {
   width: 90%;
   height: 67%;
   display: flex;
@@ -291,7 +291,7 @@ nav li a:focus {
 }
 #article-two section h1 {
   font-size: 30px;
-  font-family: lufga;
+  font-family: "lufga";
   color: white;
   margin-top: 10%;
   margin-left: 10%;
@@ -369,4 +369,13 @@ nav li a:focus {
   position: absolute;
   right: 20px;
   bottom: -10px;
+}
+#dots {
+  width: 10%;
+  position: absolute;
+  bottom: 5%;
+  left: 45%;
+}
+#dots * {
+  margin-left: 3%;
 }
