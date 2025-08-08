@@ -15,9 +15,14 @@ ul {
   src: url("./font/LufgaMedium.ttf");
 }
 body {
-  height: 300vh;
+  /* height: 300vh; */
   overflow-x: hidden;
   margin: 0;
+}
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 header {
   display: flex;
@@ -25,7 +30,9 @@ header {
 }
 nav {
   width: 88vw;
-  height: 10.40vh;
+  min-height: 5.625rem;
+  max-height: 6rem;
+  height: auto;
   background: #000;
   display: flex;
   border-radius: 45px;
@@ -98,20 +105,22 @@ a {
 nav li a:focus {
   background: #fd853a;
 }
-a:focus, button:focus {
+a:focus,
+button:focus {
   outline: 2px solid #fd853a;
   outline-offset: 1px;
 }
 #article-one {
   width: 100vw;
-  height: 95vh;
+  min-height: 51.2rem;
   display: flex;
   justify-content: center;
-  margin-bottom: 6.65vh;
+  align-items: start;
+  margin-bottom: 57.5px;
 }
 #name {
   width: 100vw;
-  height: 50vh;
+  min-height: 27rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -119,7 +128,7 @@ a:focus, button:focus {
 }
 #name button {
   width: 6.51vw;
-  height: 4.62vh;
+  min-height: 2.49rem;
   background: transparent;
   border-radius: 50px;
   border: 1px solid black;
@@ -131,7 +140,7 @@ a:focus, button:focus {
 #name img {
   position: absolute;
   left: 5.98vw;
-  bottom: 3.24vh;
+  bottom: 28px;
 }
 #name h1 {
   font-size: 6.25rem;
@@ -146,20 +155,20 @@ a:focus, button:focus {
 }
 #name h1 img {
   position: absolute;
-  left: -4.10vw;
-  bottom: -6.13vh;
+  left: -4.1vw;
+  bottom: -53px;
 }
 #quex {
   width: 90vw;
-  height: 90vh;
-  position: absolute;
-  margin-top: 15vh;
+  min-height: 48.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  margin-top: 129px;
 }
 #quote img {
-  margin-bottom: 2.31vh;
+  margin-bottom: 20px;
 }
 #quote p {
   font-family: "lufga";
@@ -168,6 +177,7 @@ a:focus, button:focus {
   color: #344054;
 }
 #experience {
+  height: auto;
   display: flex;
   align-items: end;
   flex-direction: column;
@@ -184,18 +194,18 @@ a:focus, button:focus {
 }
 #photo {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   justify-content: center;
   align-items: end;
   position: absolute;
 }
 #photo img {
-  margin-bottom: -5vh;
+  margin-bottom: -43px;
 }
 #pore {
   width: 22.5vw;
-  height: 10.5vh;
+  min-height: 5.67rem;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid white;
   border-radius: 100px;
@@ -206,12 +216,12 @@ a:focus, button:focus {
   backdrop-filter: blur(7px);
   list-style: none;
   position: absolute;
-  bottom: 2vh;
-  left: 37.76vw;
+  bottom: 17px;
+  left: 580px;
   cursor: pointer;
 }
 #pore li {
-  height: 80%;
+  min-height: 4.53rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -236,14 +246,14 @@ a:focus, button:focus {
 }
 #pore li img {
   position: relative;
-  top: -2.5vh;
+  top: -21px;
 }
 #hire-me img {
   opacity: 0;
 }
 #article-two {
   width: 99vw;
-  height: 105vh;
+  min-height: 56.7rem;
   background-image: url("two/background.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -277,15 +287,15 @@ a:focus, button:focus {
   position: absolute;
 }
 #yellow-three {
-  top: -24.30vh;
+  top: -24.3vh;
   left: -4.94vw;
 }
 #yellow-two {
-  top: -22.80vh;
-  left: 31.90vw;
+  top: -22.8vh;
+  left: 31.9vw;
 }
 #yellow-one {
-  top: -8.10vh;
+  top: -8.1vh;
   right: -4.94vw;
 }
 #article-two section:not(#dots) {
@@ -331,7 +341,7 @@ a:focus, button:focus {
   background-repeat: no-repeat;
   mask-image: url("two/Rectangle 6.png");
   mask-size: 100%;
-  mask-position: -2.60vw -11.57vh;
+  mask-position: -2.6vw -11.57vh;
   mask-repeat: no-repeat;
 }
 .rectangle {
@@ -372,7 +382,7 @@ a:focus, button:focus {
 }
 .up-right {
   padding: 3.125%;
-  background-color: #1D2939;
+  background-color: #1d2939;
   border-radius: 50px;
   transform: scale(1.7);
   position: absolute;
