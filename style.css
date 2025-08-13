@@ -50,7 +50,7 @@ nav ul {
 }
 nav ul li a {
   width: clamp(80px, 8vw, 160px);
-  height: clamp(40px, 7vh, 80px);
+  height: clamp(40px, 8.5vh, 80px);
   background: none;
   color: white;
   font-size: clamp(1rem, 1.5vw, 1.5rem);
@@ -109,7 +109,8 @@ button:focus {
   outline-offset: 1px;
 }
 #article-one {
-  width: 100vw;
+  width: 100%;
+  max-width: 100vw;
   min-height: 51.2rem;
   display: flex;
   justify-content: center;
@@ -117,7 +118,8 @@ button:focus {
   margin-bottom: 3.593rem;
 }
 #name {
-  width: 100vw;
+  width: 100%;
+  max-width: 100vw;
   min-height: 27rem;
   display: flex;
   flex-direction: column;
@@ -126,16 +128,16 @@ button:focus {
 }
 #name button {
   width: clamp(100px, 6vw, 160px);
-  min-height: clamp(50px, 5rem, 60px)m;
+  min-height: clamp(40px, 2.5rem, 60px);
   background: transparent;
   border-radius: 50px;
   border: 1px solid black;
   font-weight: 600;
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1.5rem, 2vw, 1.5rem);
   position: relative;
   box-shadow: 0px 5px 5px rgb(168, 168, 168);
 }
-#name img {
+#name button img {
   position: absolute;
   left: 5.98vw;
   bottom: 1.75rem;
@@ -201,12 +203,13 @@ button:focus {
 #photo img {
   max-width: 100%;
   height: auto;
+  transform: translateY(15%);
   margin-bottom: -2.68rem;
 }
 #pore {
   width: fit-content;
   max-width: clamp(180px, 90%, 350px);
-  min-height: clamp(40px, 5vh, 90px);
+  min-height: clamp(40px, 4vh, 90px);
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid white;
   border-radius: 100px;
@@ -238,8 +241,8 @@ button:focus {
   width: 65%;
   background: #fd853a;
   font-weight: 600;
-  transform: translateX(0.32vw);
-  margin-left: -0.32vw;
+  transform: translateX(-10%);
+  /* margin-left: -0.32vw; */
 }
 #hire-me {
   width: 45%;
@@ -253,9 +256,44 @@ button:focus {
 #hire-me img {
   opacity: 0;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  #article-one {
+    height: 100vh;
+  }
+  #name {
+    transform: translateX(5%) scale(100%);
+  }
+  #name button img {
+    position: absolute;
+    left: 95%;
+    bottom: 80%;
+  }
+  #name h1 {
+    font-size: clamp(5rem, 8vw, 10rem);
+  }
+  #name h1 img {
+    position: absolute;
+    left: -11%;
+    bottom: -42%;
+  }
+  #photo img {
+    transform: translateY(24.5vh) translateX(1.5vh);
+  }
+  #pore {
+    width: 34%;
+    height: 9vh;
+    transform: translate(-117%, 200%);
+  }
+  #pore li {
+    height: 40%;
+  transform: translateX(0.32vw);
+  margin-left: -20px;
+  }
+}
 #article-two {
   width: clamp(300px, 99vw, 1600px);
   height: 56.7rem;
+  /* min-height: 105vh; */
   display: flex;
   justify-content: end;
   align-items: start;
@@ -291,19 +329,19 @@ button:focus {
 #yellow-three,
 #yellow-two,
 #yellow-one {
-  position: absolute;
+  position: relative;
 }
 #yellow-three {
   top: -35%;
-  left: -5.5%;
+  left: -9.3%;
 }
 #yellow-two {
   top: -32%;
-  left: 36%;
+  left: -2%;
 }
 #yellow-one {
   top: -10.5%;
-  right: -4.5%;
+  right: -9%;
 }
 #article-two section:not(#dots) {
   width: 90%;
