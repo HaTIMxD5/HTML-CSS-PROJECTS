@@ -333,7 +333,7 @@ header a,
 }
 /* article-one's animation */
 #photo:has(#circle-one:hover) ~ #name {
-  animation: name 0.8s forwards;
+  animation: name 0.5s forwards;
 }
 @keyframes name {
   0% {
@@ -356,7 +356,7 @@ header a,
   }
 }
 #photo:has(#circle-one:hover) ~ #quex {
-  animation: quex 0.8s ease forwards;
+  animation: quex 0.5s ease forwards;
 }
 @keyframes quex {
   0% {
@@ -373,7 +373,7 @@ header a,
   }
 }
 .quote {
-  animation: quote-class 0.8s forwards;
+  animation: quote-class 0.5s forwards;
 }
 @keyframes quote-class {
   0% {
@@ -394,7 +394,7 @@ header a,
   }
 }
 .quote-two {
-  animation: quote-two-class 0.8s forwards;
+  animation: quote-two-class 0.5s forwards;
   display: none;
 }
 @keyframes quote-two-class {
@@ -416,7 +416,7 @@ header a,
   }
 }
 .experience {
-  animation: experience-class 0.8s forwards;
+  animation: experience-class 0.5s forwards;
 }
 @keyframes experience-class {
   0% {
@@ -492,6 +492,7 @@ header a,
   border-radius: 0 0 50px 50px;
   z-index: 1;
   position: relative;
+  overflow: hidden;
 }
 #article-two header {
   width: 90%;
@@ -503,16 +504,18 @@ header a,
   margin-left: 5%;
 }
 #article-two header h1 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 50px;
-  font-weight: 600;
+  font-weight: 400;
 }
 #article-two header h1 span {
   color: #fd853a;
 }
+#article-two header p {
+  font-size: 1.4rem;
+}
 #absolutly {
   position: absolute;
+  /* overflow: hidden; */
 }
 #yellow-three,
 #yellow-two,
@@ -520,17 +523,21 @@ header a,
   position: absolute;
 }
 #yellow-three {
-  top: -210px;
-  left: -76px;
+  top: -170px;
+  left: -214px;
+  scale: 1.4;
+  rotate: -65deg;
 }
 #yellow-two {
-  top: -197px;
-  left: 490px;
+  top: -310px;
+  left: 370px;
+  scale: 0.5;
 }
 #yellow-one {
-  top: -70px;
-  right: -70px;
-  overflow: hidden;
+  top: 110px;
+  right: -270px;
+  scale: 2.5;
+  rotate: 145deg;
 }
 #article-two section:not(#dots) {
   width: 90%;
@@ -542,20 +549,32 @@ header a,
   gap: 4%;
   margin-left: 5%;
 }
-#article-two section h1 {
-  font-size: 30px;
+.article-two-container {
+  width: 31%;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(7px);
+  border: none;
+  box-shadow: 0 0 0 3px rgb(137, 137, 137);
+  border-radius: 35px;
+}
+.article-two-container h1 {
+  font-size: 2rem;
   color: white;
   margin-top: 10%;
   margin-left: 10%;
   margin-bottom: 5%;
+  font-weight: 400;
 }
-#article-two section > div {
-  width: 31%;
-  height: 60%;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(7px);
-  border: 3px solid rgb(137, 137, 137);
-  border-radius: 35px;
+/* .two-class {
+  width: 100%;
+  height: 100%;
+} */
+/* .two-class:hover {
+  overflow: hidden;
+} */
+#article-two hr {
+  border-color: rgb(137, 137, 137);
 }
 .imaging {
   width: 100%;
@@ -564,55 +583,58 @@ header a,
   flex-direction: column;
   justify-content: center;
   position: relative;
-  transform: scale(1.02);
+  transform: scale(1.02) translateX(4px);
 }
 .png {
   width: 100%;
   height: 100%;
   position: absolute;
-  transform: scale(0.8) scaleX(1.23) translateY(3.5%) translateX(45px);
+  transform: scale(0.8) scaleX(1.23) translateY(10%) translateX(45px);
   background-image: url("two/png.png");
   background-repeat: no-repeat;
   mask-image: url("two/Rectangle 6.png");
   mask-size: 100%;
-  mask-position: -40px -100px;
+  mask-position: -40px -115px;
   mask-repeat: no-repeat;
 }
 .rectangle {
   width: 100%;
   height: 100%;
   position: absolute;
-  transform: scale(0.9) scaleX(1.1) translateY(15%) translateX(20px);
+  transform: scale(0.9) scaleX(1.1) translateY(22%) translateX(20px);
   background-image: url("two/Rectangle.png");
   background-repeat: no-repeat;
   mask-image: url("two/Rectangle 6.png");
   mask-size: 100%;
-  mask-position: -20px -155px;
+  mask-position: -20px -170px;
   mask-repeat: no-repeat;
 }
 .main-img-1-3 {
   width: 100%;
   height: 100%;
   position: relative;
-  transform: scale(1.01) translateY(25%);
+  transform: scale(1.015) translateY(32%);
   background-image: url("two/1&3.png");
   background-repeat: no-repeat;
   mask-image: url("two/Rectangle 6.png");
   mask-size: 100%;
-  mask-position: 0px -200px;
+  mask-position: 0px -210px;
   mask-repeat: no-repeat;
 }
 .main-img-2 {
   width: 100%;
   height: 100%;
   position: relative;
-  transform: scale(1.01) translateY(25%);
+  transform: scale(1.01) translateY(32%);
   background-image: url("two/2.png");
   background-repeat: no-repeat;
   mask-image: url("two/Rectangle 6.png");
   mask-size: 100%;
-  mask-position: 0px -200px;
+  mask-position: 0px -210px;
   mask-repeat: no-repeat;
+}
+#article-two .custom-arrow {
+  bottom: -65%;
 }
 .custom-arrow {
   width: 100px;
@@ -679,6 +701,151 @@ header a,
   bottom: 10%;
   left: 0.5%;
 }
+/* .container-two-js {
+  background: #fd853a;
+  transition: 0.5s;
+} */
+.imaging:hover + #two-arrow {
+  background: #fd853a;
+  transition: 0.5s;
+}
+#article-two:hover #yellow-one {
+  animation: yellow-one 15s forwards;
+}
+@keyframes yellow-one {
+  0% {
+    transform: translateX(0%);
+  }
+  17% {
+    transform: translateX(-10%);
+  }
+  33% {
+    transform: translateX(-7.5%);
+  }
+  50% {
+    transform: translateX(-8.75%);
+  }
+  67% {
+    transform: translateX(-8.125%);
+  }
+  83% {
+    transform: translateX(-8.437%);
+  }
+  100% {
+    transform: translateX(-8.28%);
+  }
+}
+#article-two:hover #yellow-two {
+  animation: yellow-middle 15s forwards;
+}
+@keyframes yellow-middle {
+  0% {
+    transform: translate(0%, 0%) rotateZ(0deg);
+  }
+  17% {
+    transform: translate(90%, 7%) rotateZ(72deg);
+  }
+  33% {
+    transform: translate(67.5%, 5.25%) rotateZ(54deg);
+  }
+  50% {
+    transform: translate(88.75%, 6.125%) rotateZ(66deg);
+  }
+  67% {
+    transform: translate(83%, 5.687%) rotateZ(62deg);
+  }
+  83% {
+    transform: translate(85.875%, 5.9%) rotateZ(64deg);
+  }
+  100% {
+    transform: translate(84.437%, 5.79%) rotateZ(63deg);
+  }
+}
+#article-two:hover #yellow-three {
+  animation: yellow-three 15s forwards;
+}
+@keyframes yellow-three {
+  0% {
+    transform: translate(-0%, 0%);
+    rotate: -65deg;
+  }
+  17% {
+    transform: translate(-5%, 20%);
+    rotate: -15deg;
+  }
+  33% {
+    transform: translate(-5%, 17.5%);
+    rotate: -18.75deg;
+  }
+  50% {
+    transform: translate(-5%, 18.5%);
+    rotate: -16.875deg;
+  }
+  67% {
+    transform: translate(-5%, 18%);
+    rotate: -17.812deg;
+  }
+  83% {
+    transform: translate(-5%, 18.25%);
+    rotate: -17.343deg;
+  }
+  100% {
+    transform: translate(-4.14%, 18.125%);
+    rotate: -17.577deg;
+  }
+}
+/* #article-two:not(:hover) #yellow-one {
+  animation: yellow-one 10s forwards;
+}
+@keyframes yellow-one {
+  0% {
+    transform: translateX(-8.28%);
+  }
+  17% {
+    transform: translateX(-8.437%);
+  }
+  33% {
+    transform: translateX(-8.125%);
+  }
+  50% {
+    transform: translateX(-8.75%);
+  }
+  67% {
+    transform: translateX(-7.5%);
+  }
+  83% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+#article-two:not(:hover) #yellow-two {
+  animation: yellow-middle 10s forwards;
+}
+@keyframes yellow-middle {
+  0% {
+    transform: translate(84.437%, 5.79%) rotateZ(63deg);
+  }
+  17% {
+    transform: translate(85.875%, 5.9%) rotateZ(64deg);
+  }
+  33% {
+    transform: translate(83%, 5.687%) rotateZ(62deg);
+  }
+  50% {
+    transform: translate(88.75%, 6.125%) rotateZ(66deg);
+  }
+  67% {
+    transform: translate(67.5%, 5.25%) rotateZ(54deg);
+  }
+  83% {
+    transform: translate(90%, 7%) rotateZ(72deg);
+  }
+  100% {
+    transform: translate(0%, 0%) rotateZ(0deg);
+  }
+} */
 #article-three {
   width: 100vw;
   height: 100vh;
