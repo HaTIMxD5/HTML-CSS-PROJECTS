@@ -1128,9 +1128,9 @@ header a,
 #background-one,
 #background-two {
   width: 50%;
-  height: 90%;
+  height: 100%;
   background: url(five/Frame\ 27.png);
-  background-position: 0px -40px;
+  background-position: 0px -4px;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
@@ -1148,6 +1148,9 @@ header a,
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
+}
+.five-p {
+  display: none;
 }
 .custom-arrow-right {
   width: 90px;
@@ -1196,11 +1199,11 @@ header a,
   rotate: -45deg;
 }
 #section-backgrounds h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-weight: 600;
   color: #fffaf5;
-  margin-top: 39.1%;
-  margin-left: 3.5%;
+  margin-top: 43.9%;
+  margin-left: 3%;
 }
 #last-five {
   width: 90vw;
@@ -1250,6 +1253,39 @@ header a,
   color: #344054;
   text-align: center;
   margin-top: 2%;
+}
+#background-one:hover p, #background-two:hover p {
+  color: #ffead5;
+  font-size: 1.05rem;
+  margin-left: 4%;
+  margin-bottom: -14%;
+  transition: 0.2s;
+}
+#background-one:hover h1, #background-two:hover h1 {
+  transform: translate(20px, -105px);
+  z-index: 1;
+  transition: 0.2s;
+}
+#background-one:hover .five-p, #background-two:hover .five-p {
+  width: 97%;
+  height: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  transform: translate(2%, 93%);
+  transition: 0.2s;
+}
+#background-one:hover .main-div-right, #background-two:hover .main-div-right {
+  background: #FD853A;
+  transition: 0.2s;
+}
+#background-one:hover .diving-right:before, #background-one:hover .diving-right:after, #background-one:hover .diving-right,#background-two:hover .diving-right:before, #background-two:hover .diving-right:after, #background-two:hover .diving-right  {
+  background: white;
 }
 #article-six {
   width: 100vw;
@@ -1709,4 +1745,5 @@ hr {
 #footer-one button:hover + #footer-diving {
   rotate: 0deg;
   transition: 0.2s;
+  pointer-events: none;
 }
