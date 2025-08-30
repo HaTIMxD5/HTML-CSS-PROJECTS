@@ -1475,16 +1475,28 @@ header a,
   margin-top: 8%;
   position: relative;
 }
+#seven-last img {
+  margin: 0% 0.1%;
+}
 #seven-last p {
-  width: 110%;
+  width: max-content;
   background: white;
-  display: inline;
+  display: inline-block;
   font-size: 3rem;
-  word-break: break-all;
+  white-space: nowrap;
   rotate: -2deg;
   position: absolute;
-  top: 31%;
+  top: 7%;
   left: -1.7%;
+  animation: article-seven-animation 6s linear forwards infinite;
+}
+@keyframes article-seven-animation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 #article-eight {
   width: 100%;
